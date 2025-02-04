@@ -1,0 +1,10 @@
+import requests
+
+# Example data
+data = {"Open": 100, "High": 105, "Low": 98}
+
+response = requests.post("http://127.0.0.1:8000/predict", json=data)
+print(response.json())
+@app.get("/test")
+def test():
+    return {"message": "This is a test endpoint"}
